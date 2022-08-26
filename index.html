@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Javascript</title>
+</head>
+<body>
+    
+    <h2>
+        Testes Javascripts
+    </h2>
+    <br>
+
+    <button type="button" onclick="afficherHour()">Affichr l'heure</button>
+
+    <br>
+     <p>
+        Caluclatrice
+     </p>
+    <input type="text" id="nbr1" placeholder="nombre 1"> <br>
+    + <br>
+    <input type="text" id="nbr2" placeholder="nombre 2"> <br>
+    <input type="button" value="Afficher resultat" onclick="calcule()"> <br>
+    Resultat =  <input type="text" id="+" > <br>
+
+    <script>
+        const date = new Date(); // Création d'une nouvelle date
+        let waqat = date.getHours(); // recuperer l'heure
+        let minute = date.getMinutes();
+        let seconde = date.getSeconds() ;
+
+        function afficherHour() {
+            document.write("<p>L'heure est " + waqat + "H: "+ minute +':'+ seconde+ "s</p>");
+        }
+
+        function calcule(){
+            let nbr1 = document.getElementById("nbr1").value;
+            let nbr2 = document.getElementById("nbr2").value;
+
+            let sum = Number(nbr1) + Number(nbr2);
+
+            document.getElementById("+").value = sum;
+        }
+        
+    </script>
+
+</body>
+</html>
