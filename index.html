@@ -22,6 +22,11 @@
 
     <button type="button" onclick="getMajeure()">Teste d'entrer</button>
 
+    <h3>
+        Afficheer listes utilisateurs 
+    </h3>
+
+    <button type="button" onclick="showUsers()">Afficher listes utilisateurs</button>
 
     <br>
      <h3>
@@ -77,6 +82,17 @@
              else {
                 document.write("vous ête eligible")
              }
+        }
+
+        // variables contenant la liste d'utilisateurs
+        let users = ["Ibrahim", 'Issa', 'Idrissa', 'Moussa', 'Abdou']
+
+        // fonction pour afficher la liste des utilisateurs issue de la variables users
+        function showUsers(){
+            // show users on users list 
+            for(let i = 0; i < users.length; i++){
+                document.write("<p>"+ users[i] +"</p>");
+            }
         }
 
     </script>
