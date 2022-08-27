@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Javascript</title>
+
+    
+
 </head>
 <body>
     
@@ -43,15 +46,15 @@
             variables 
         */
         const date = new Date(); // Création d'une nouvelle date
-        let waqat = date.getHours(); // recuperer l'heure
-        let minute = date.getMinutes();
-        let seconde = date.getSeconds() ;
+        let heure = date.getHours(); // recuperer l'heure
+        let minute = date.getMinutes(); // recuperer les minutes
+        let seconde = date.getSeconds() ; // recuperer les secondes
 
         let name = "Ibrahim ahmda";
         let age; 
         // fonction pour afficher l'heure
         function afficherHour() {
-            document.write("<p>L'heure est " + waqat + "H: "+ minute +':'+ seconde+ "s</p>");
+            document.write("<p>L'heure est " + heure + "H: "+ minute +':'+ seconde+ "s</p>");
         }
 
         // fonction pour additioner 2 nombre et afficher le resultat dans un champ
@@ -92,6 +95,8 @@
             // show users on users list 
             for(let i = 0; i < users.length; i++){
                 document.write("<p>"+ users[i] +"</p>");
+
+                console.log(users[i]);
             }
         }
 
