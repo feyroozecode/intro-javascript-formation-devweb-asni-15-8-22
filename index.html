@@ -8,17 +8,25 @@
 </head>
 <body>
     
-    <h2>
+    <h3>
         Testes Javascripts
-    </h2>
-    <br>
+    </h3>
 
-    <button type="button" onclick="afficherHour()">Affichr l'heure</button>
+    <button type="button" onclick="afficherHour()">Afficher l'heure</button>
 
     <br>
-     <p>
+     
+    <h3>
+        Testes d'entré
+    </h3>
+
+    <button type="button" onclick="getMajeure()">Teste d'entrer</button>
+
+
+    <br>
+     <h3>
         Caluclatrice
-     </p>
+     </h3>
     <input type="text" id="nbr1" placeholder="nombre 1"> <br>
     + <br>
     <input type="text" id="nbr2" placeholder="nombre 2"> <br>
@@ -26,15 +34,22 @@
     Resultat =  <input type="text" id="+" > <br>
 
     <script>
+        /* 
+            variables 
+        */
         const date = new Date(); // Création d'une nouvelle date
         let waqat = date.getHours(); // recuperer l'heure
         let minute = date.getMinutes();
         let seconde = date.getSeconds() ;
 
+        let name = "Ibrahim ahmda";
+        let age; 
+        // fonction pour afficher l'heure
         function afficherHour() {
             document.write("<p>L'heure est " + waqat + "H: "+ minute +':'+ seconde+ "s</p>");
         }
 
+        // fonction pour additioner 2 nombre et afficher le resultat dans un champ
         function calcule(){
             let nbr1 = document.getElementById("nbr1").value;
             let nbr2 = document.getElementById("nbr2").value;
@@ -44,6 +59,26 @@
             document.getElementById("+").value = sum;
         }
         
+        // fonction pour faire un teste et afficher l'égibilité 
+        function getMajeure(){
+            age = prompt("Teste d'entrer",) // boite de dialog
+
+            if(age > 0 && age <=18){
+                document.write("Vous n'este pas eligible au concours il faut 18 ans" )
+            }
+             else if(age > 40 && age <= 60){
+                document.write("Vous êtes anciens" )
+             }
+             else if(age == 0){
+                document.write('impossible')
+                alert("impossible")
+
+             }
+             else {
+                document.write("vous ête eligible")
+             }
+        }
+
     </script>
 
 </body>
